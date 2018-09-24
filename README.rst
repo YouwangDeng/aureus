@@ -34,7 +34,7 @@ A Simple Example
 .. code-block:: text
 
     $ python3 main.py
-     * * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+     * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 
 A MVC pattern Example
 ----------------
@@ -70,7 +70,7 @@ A MVC pattern Example
 .. code-block:: text
 
     $ python3 main.py
-     * * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+     * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 
 
 
