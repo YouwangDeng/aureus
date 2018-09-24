@@ -3,13 +3,16 @@
 
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='Aureus',
     version='0.0.1',
     description=(
         'a simple python web framework'
     ),
-    long_description=open('README.rst').read(),
+    long_description=long_description,
     author='Youwang Deng',
     author_email='dengyouwang@gmail.com',
     maintainer='Youwang Deng',
