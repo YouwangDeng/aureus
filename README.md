@@ -94,7 +94,7 @@ $ python3 main.py
 
 -   License:
     [BSD](https://github.com/YouwangDeng/Aureus/blob/master/LICENCE)
--   Releases: <https://pypi.org/project/Aureus/>
--   Code: <https://github.com/YouwangDeng/Aureus>
--   Issue tracker: <https://github.com/YouwangDeng/Aureus/issues>
+-   Releases: <https://pypi.org/project/aureus/>
+-   Code: <https://github.com/YouwangDeng/aureus>
+-   Issue tracker: <https://github.com/YouwangDeng/aureus/issues>
 
