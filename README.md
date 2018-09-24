@@ -1,12 +1,11 @@
-Aureus =====
+# Aureus
 
 Aureus is a lightweight web application framework. It supports
 Model-View-Controller (MVC) architectural pattern. It is designed to
 make getting started quick and easy, with the ability to scale up to
 complex applications.
 
-Installing
-==========
+## Installing
 
 Install and update using
 [pip](https://pip.pypa.io/en/stable/quickstart/):
@@ -15,8 +14,7 @@ Install and update using
 pip install -U Aureus
 ```
 
-A Simple Example
-================
+## A Simple Example
 
 ``` {.sourceCode .python}
 from aureus import AUREUS
@@ -35,7 +33,7 @@ $ python3 main.py
  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 ```
 
-A MVC pattern Example ----------------
+## A MVC pattern Example
 
 ``` {.sourceCode .python}
 from aureus import AUREUS
@@ -70,8 +68,7 @@ $ python3 main.py
  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 ```
 
-Links
-=====
+## Links
 
 -   License:
     [BSD](https://github.com/YouwangDeng/Aureus/blob/master/LICENCE)
