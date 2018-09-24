@@ -61,6 +61,7 @@ class BaseView(View):
             return methods_meta[request.method](request, *args, **options)
         else:
             return '<h1>Unknown or unsupported require method</h1>'
+            
 
 class Hello(BaseView):
 
