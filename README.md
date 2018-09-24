@@ -63,6 +63,7 @@ class BaseView(View):
             return '<h1>Unknown or unsupported require method</h1>'
 
 class Hello(BaseView):
+
     def get(self, request):
         return '<h1>Hello, Aureus!</h1>'
 
