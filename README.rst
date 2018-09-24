@@ -81,12 +81,6 @@ Links
 * Releases: https://pypi.org/project/Aureus/
 * Code: https://github.com/YouwangDeng/Aureus
 * Issue tracker: https://github.com/YouwangDeng/Aureus/issues
-* Test status:
 
-  * Linux, Mac: https://travis-ci.org/pallets/flask
-  * Windows: https://ci.appveyor.com/project/pallets/flask
 
-.. _WSGI: https://wsgi.readthedocs.io
-.. _Werkzeug: https://www.palletsprojects.com/p/werkzeug/
-.. _Jinja: https://www.palletsprojects.com/p/jinja/
 .. _pip: https://pip.pypa.io/en/stable/quickstart/
