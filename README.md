@@ -10,60 +10,80 @@ complex applications.
 Install and update using
 [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-``` {.sourceCode .text}
-pip install -U Aureus
+```bash
+pip install -U aureus
 ```
 
 ## A Simple Example
 
-``` {.sourceCode .python}
+```Python
 from aureus import AUREUS
 
 app = AUREUS()
 
-@app.route('/index', methods=['GET'])
-def index():
-    return 'Hello Aureus!'
+@app.route('/', methods=['GET'])
+def hello():
+    return '<h1>Hello Aureus!</h1>'
 
 app.run()
 ```
 
-``` {.sourceCode .text}
+```bash
 $ python3 main.py
  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 ```
 
 ## A MVC pattern Example
 
-``` {.sourceCode .python}
+```Python
 from aureus import AUREUS
-from aureus.view import Controller
-
-from core.base_view import BaseView
+from aureus.view import View, Controller
 
 
-class Index(BaseView):
+class BaseView(View):
+    
+    methods = ['GET, POST']
+
+    def post(self, request, *args, **options):
+        pass
+
+    def get(self, request, *args, **options):
+        pass
+
+    def dispatch_request(self, request, *args, **options):
+
+        methods_meta = {
+            'GET': self.get,
+            'POST': self.post,
+        }
+
+        if request.method in methods_meta:
+            return methods_meta[request.method](request, *args, **options)
+        else:
+            return '<h1>Unknown or unsupported require method</h1>'
+
+class Hello(BaseView):
     def get(self, request):
-        return 'Hello, Aureus!'
+        return '<h1>Hello, Aureus!</h1>'
 
 
 app = AUREUS()
 
 aureus_url_map = [
     {
-        'url': '/index',
-        'view': Index,
-        'endpoint': 'index'
+        'url': '/',
+        'view': Hello,
+        'endpoint': 'hello'
     },
 ]
 
-index_controller = Controller('index', aureus_url_map)
-app.load_controller(index_controller)
+hello_controller = Controller('hello', aureus_url_map)
+app.load_controller(hello_controller)
 
 app.run()
 ```
 
-``` {.sourceCode .text}
+```bash
 $ python3 main.py
  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
 ```

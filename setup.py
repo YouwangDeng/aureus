@@ -7,12 +7,13 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='Aureus',
-    version='0.0.1',
+    name='aureus',
+    version='0.0.3',
     description=(
         'a simple python web framework'
     ),
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author='Youwang Deng',
     author_email='dengyouwang@gmail.com',
     maintainer='Youwang Deng',
@@ -20,7 +21,7 @@ setup(
     license='BSD License',
     packages=find_packages(),
     platforms=["all"],
-    url='https://github.com/YouwangDeng/Aureus',
+    url='https://github.com/YouwangDeng/aureus',
     install_requires=[
         'Werkzeug>=0.14.1',
         'PyMySQL>=0.9.2',
